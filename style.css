@@ -8,8 +8,9 @@ h1 {
 .frame{
     border: "solid";
     display: flex;
-    justify-content: center;
-
+    margin: 10px;
+    gap: 200px;
+    margin-left: 200px;
 }
 
 .drawing-area{
