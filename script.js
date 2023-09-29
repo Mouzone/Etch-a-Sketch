@@ -12,7 +12,7 @@ function createRows(length, num_rows) {
         const row = document.createElement('div');
         row.style.width = width + 'px';
         row.style.height = length + 'px';
-        row.style.border = '1px solid';
+        row.style.border = '1 px solid';
         row.style.display = "flex"
         createColumns(row, length, num_rows);
     }
