@@ -22,6 +22,7 @@ function createColumns(row, length, num_rows) {
 
     for (let i = 0; i < num_rows; i++) {
         const column_square = document.createElement('div');
+        column_square.classList.add("square")
         column_square.style.width = length + 'px';
         column_square.style.height = length + 'px';
         column_square.style.border= '1px solid';
