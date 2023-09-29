@@ -7,9 +7,15 @@ h1 {
 
 .frame{
     border: "solid";
+    display: flex;
+    justify-content: center;
+
 }
 
 .drawing-area{
-    border: "solid";
+    border: 5px solid;
     display: flex;
+    padding: 300px;
+    width: 50px;
+    margin: 20px;
 }
