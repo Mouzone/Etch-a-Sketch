@@ -3,7 +3,7 @@ const width = 600.0;
 const drawing_area = document.querySelector('.drawing-area');
 
 function findLength(num_rows) {
-    const length = width / num_rows;
+    const length = height / num_rows;
     return length;
 }
 
@@ -32,7 +32,6 @@ function createColumns(row, length, num_rows) {
         row.appendChild(column_square);
     }
     drawing_area.appendChild(row);
-
 }
 
 window.onload = function () {
