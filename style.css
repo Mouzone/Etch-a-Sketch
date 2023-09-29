@@ -16,7 +16,7 @@ h1 {
 .drawing-area{
     border: 5px solid;
     display: flex;
-    padding: 300px;
-    width: 50px;
+    width: 600px;
+    height: 600px;
     margin: 20px;
 }
