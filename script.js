@@ -24,7 +24,7 @@ function createColumns(row, length, num_rows) {
         const column_square = document.createElement('div');
         column_square.style.width = length + 'px';
         column_square.style.height = length + 'px';
-        column_square.style.borderBottom = '1px solid';
+        column_square.style.border= '1px solid';
 
         row.appendChild(column_square);
     }
