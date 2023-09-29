@@ -8,24 +8,28 @@ function findLength(num_rows) {
 }
 
 function createRows(length, num_rows) {
-    const row = document.createElement('div');
-    row.style.width = width + 'px';
-    row.style.height = length + 'px';
-    row.style.border = '2px solid';
-
-    createColumns(row, length, num_rows);
+    for (let i = 0; i < num_rows; i++){
+        const row = document.createElement('div');
+        row.style.width = width + 'px';
+        row.style.height = length + 'px';
+        row.style.border = '1px solid';
+        row.style.display = "flex"
+        createColumns(row, length, num_rows);
+    }
 }
 
 function createColumns(row, length, num_rows) {
+
     for (let i = 0; i < num_rows; i++) {
         const column_square = document.createElement('div');
         column_square.style.width = length + 'px';
         column_square.style.height = length + 'px';
-        column_square.style.border = '2px solid';
+        column_square.style.borderBottom = '1px solid';
 
         row.appendChild(column_square);
-        drawing_area.appendChild(row);
     }
+    drawing_area.appendChild(row);
+
 }
 
 createRows(findLength(10), 10);
