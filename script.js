@@ -4,11 +4,9 @@ const drawing_area = document.querySelector('.drawing-area');
 function createRows(num_rows) {
     for (let i = 0; i < num_rows; i++){
         const row = document.createElement('div');
-        row.classList.add("row")
-        row.style.border = '1 px solid';
+        row.style.border = '.5px solid';
         row.style.display = "flex"
         row.style.flexGrow = "1"
-        row.style.flexBasis = "auto"
         createColumns(row, num_rows);
     }
 }
@@ -17,11 +15,8 @@ function createColumns(row, num_rows) {
 
     for (let i = 0; i < num_rows; i++) {
         const column_square = document.createElement('div');
-        column_square.classList.add("square")
         column_square.style.flexGrow = "1"
-        column_square.style.flexBasis = "auto"
-
-        column_square.style.border= '1px solid';
+        column_square.style.border= '.5px solid';
         column_square.addEventListener('mouseenter', function () {
             column_square.style.backgroundColor = 'black';
         });
