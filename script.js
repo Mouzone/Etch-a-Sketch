@@ -1,30 +1,26 @@
-const height = 600.0;
-const width = 600.0;
+
 const drawing_area = document.querySelector('.drawing-area');
 
-function findLength(num_rows) {
-    const length = height / num_rows;
-    return length;
-}
-
-function createRows(length, num_rows) {
+function createRows(num_rows) {
     for (let i = 0; i < num_rows; i++){
         const row = document.createElement('div');
-        row.style.width = width + 'px';
-        row.style.height = length + 'px';
+        row.classList.add("row")
         row.style.border = '1 px solid';
         row.style.display = "flex"
-        createColumns(row, length, num_rows);
+        row.style.flexGrow = "1"
+        row.style.flexBasis = "auto"
+        createColumns(row, num_rows);
     }
 }
 
-function createColumns(row, length, num_rows) {
+function createColumns(row, num_rows) {
 
     for (let i = 0; i < num_rows; i++) {
         const column_square = document.createElement('div');
         column_square.classList.add("square")
-        column_square.style.width = length + 'px';
-        column_square.style.height = length + 'px';
+        column_square.style.flexGrow = "1"
+        column_square.style.flexBasis = "auto"
+
         column_square.style.border= '1px solid';
         column_square.addEventListener('mouseenter', function () {
             column_square.style.backgroundColor = 'black';
@@ -53,7 +49,7 @@ window.onload = function () {
         }
     } while (isNaN(num_rows) || !Number.isInteger(num_rows) || num_rows < 0 || num_rows > 100);
 
-    createRows(findLength(num_rows), num_rows)
+    createRows(num_rows)
 };
 
 
